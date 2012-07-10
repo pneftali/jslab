@@ -1,0 +1,16 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+<button id='box1'>Click me! 1</button>
+<button id='box2'>Click me! 2</button>
+
+<script src="random.js"></script>
+<script>
+	
+	var data = ['a', 'b', 'c'];
+	//console.log(randomizer(data));
+	
+	//console.log(randomizer.bindOnEvent());
+	$( '#box1' ).on('click', randomizer.bindOnEvent(data));
+
+</script>
