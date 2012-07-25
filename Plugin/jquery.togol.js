@@ -1,3 +1,6 @@
+/* Author: Neftali Papelleras
+-----------------------------*/
+
 (function ( $ ) {
 	
 	var methods = {
@@ -20,19 +23,23 @@
 				console.log( settings.target );
 				$( settings.target ).animate({
 					height: current_height+'px'
-				}, 1000, function(){
+				}, settings.speed, function(){
 
 					$( this_link ).toggleClass('aLess'); // adds or removes 'aLess' class
 					$( this_link ).text(toggle_state).append('<b>&nbsp;</b>');
-				})				
+					settings.stop.call( this );
+				})
+
 			}
 		}
 	}
 
-	$.fn.togol = function( options ) {
+	$.fn.togol = function( options, callback ) {
 
 		var settings = $.extend( {
-			'target' : null
+			'target' 	: null,
+			'speed'		: 1000,
+			stop		: function(){}
 		}, options );
 
 	    // Method calling logic
