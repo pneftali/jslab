@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#content { border: 1px solid #CCC; height: 100px; overflow: hidden; }
+
+			/** **/
+			#toggle-content { text-decoration: underline; color: blue; }
+			#toggle-content:hover { cursor: pointer; }
+		</style>					
+	</head>
+
+
+	<body>
+		<div id='content'>
+			<div class='inner-content'>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+				<p>Lorem ipsum</p>
+			</div>
+		</div>
+		<a id='toggle-content'>Toggle</a>
+	</body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="jquery.togol.js"></script>
+	<script>
+
+		var test = 	$( this ).togol({
+						target	: '#content'
+					});
+		$( '#toggle-content' ).on('click', test);
+		
+	</script>
+</html>
