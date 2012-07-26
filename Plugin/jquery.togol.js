@@ -1,7 +1,10 @@
-/* Author: Neftali Papelleras
------------------------------*/
+/* 
+ *	Author: Neftali Papelleras
+ *	Date: 25 July 2012
+ *	Version 1.0
+ *-----------------------------*/
 
-(function ( $ ) {
+;(function ( $ ) {
 	
 	var methods = {
 		init: function( settings ) {
@@ -34,7 +37,7 @@
 		}
 	}
 
-	$.fn.togol = function( options, callback ) {
+	$.fn.togol = function( options ) {
 
 		var settings = $.extend( {
 			'target' 	: null,
